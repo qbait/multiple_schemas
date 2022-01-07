@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  void _incrementCounter() async {
+  void _sampleRequest() async {
     final client = await initClient();
 
     final reviewsReq = GAllPokemonReq(
@@ -66,8 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: _sampleRequest,
+        tooltip: 'Sample Request',
         child: const Icon(Icons.add),
       ),
     );
