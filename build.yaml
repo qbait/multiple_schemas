@@ -24,8 +24,8 @@ targets:
         options:
           schema: multiple_schemas|lib/graphql/api1/schema.graphql
       gql_build|serializer_builder:
-        generate_for:
-          - lib/graphql/api1/**
+        # generate_for:
+        #   - lib/graphql/api1/**
         enabled: true
         options:
           schema: multiple_schemas|lib/graphql/api1/schema.graphql
@@ -72,8 +72,8 @@ targets:
         options:
           schema: multiple_schemas|lib/graphql/api2/schema.graphql
       gql_build|serializer_builder:
-        generate_for:
-          - lib/graphql/api2/**
+        # generate_for:
+        #   - lib/graphql/api2/**
         enabled: true
         options:
           schema: multiple_schemas|lib/graphql/api2/schema.graphql
