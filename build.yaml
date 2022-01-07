@@ -1,0 +1,97 @@
+targets:
+
+  # schema for api 1
+  $default:
+    builders:
+      gql_build|schema_builder:
+        generate_for:
+          - lib/graphql/api1/**
+        enabled: true
+      gql_build|ast_builder:
+        generate_for:
+          - lib/graphql/api1/**
+        enabled: true
+      gql_build|data_builder:
+        generate_for:
+          - lib/graphql/api1/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api1/schema.graphql
+      gql_build|var_builder:
+        generate_for:
+          - lib/graphql/api1/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api1/schema.graphql
+      gql_build|serializer_builder:
+        generate_for:
+          - lib/graphql/api1/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api1/schema.graphql
+      ferry_generator|req_builder:
+        generate_for:
+          - lib/graphql/api1/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api1/schema.graphql
+
+      # override
+      gql_build:schema_builder:
+        generate_for:
+          - lib/graphql/api1/**
+      built_value_generator:built_value:
+        generate_for:
+          - lib/graphql/api1/**
+      source_gen:combining_builder:
+        generate_for:
+          - lib/graphql/api1/**
+
+
+  # schema for api 2
+  schema_api_two:
+    builders:
+      gql_build|schema_builder:
+        generate_for:
+          - lib/graphql/api2/**
+        enabled: true
+      gql_build|ast_builder:
+        generate_for:
+          - lib/graphql/api2/**
+        enabled: true
+      gql_build|data_builder:
+        generate_for:
+          - lib/graphql/api2/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api2/schema.graphql
+      gql_build|var_builder:
+        generate_for:
+          - lib/graphql/api2/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api2/schema.graphql
+      gql_build|serializer_builder:
+        generate_for:
+          - lib/graphql/api2/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api2/schema.graphql
+      ferry_generator|req_builder:
+        generate_for:
+          - lib/graphql/api2/**
+        enabled: true
+        options:
+          schema: multiple_schemas|lib/graphql/api2/schema.graphql
+
+
+      # override
+      gql_build:schema_builder:
+        generate_for:
+          - lib/graphql/api2/**
+      built_value_generator:built_value:
+        generate_for:
+          - lib/graphql/api2/**
+      source_gen:combining_builder:
+        generate_for:
+          - lib/graphql/api2/**
